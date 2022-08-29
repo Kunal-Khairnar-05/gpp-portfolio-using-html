@@ -58,6 +58,21 @@ body.dark{
 .sidebar.close{
     width: 88px;
 }
+.sidebar img{
+    margin:auto;
+    width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    border: 4px groove #fff;
+    box-shadow: #0099ff 2px 3px 10px;
+}
+.sidebar.close img{
+    width: 50px;
+    height: 50px;
+    margin:auto;
+    border-radius: 50%;
+    border: 4px groove orangered;
+}
 
 /* ===== Reusable code - Here ===== */
 .sidebar li{
@@ -65,7 +80,7 @@ body.dark{
     list-style: none;
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .sidebar header .image,
@@ -165,7 +180,7 @@ body.dark .sidebar header .toggle{
 }
 
 .sidebar .menu{
-    margin-top: 40px;
+    margin-top: -15px;
 }
 
 .sidebar li.search-box{
@@ -173,15 +188,18 @@ body.dark .sidebar header .toggle{
     /* background-color: var(--primary-color-light); */
     cursor: pointer;
     transition: var(--tran-05);
+    margin-top: -20px;
+    size: -20px;
+
 }
 
 .sidebar li.search-box input{
-    height: 100%;
-    width: 100%;
+    height: 0%;
+    width: 0%;
     outline: none;
     border: none;
-    background-color: var(--primary-color-light);
-    color: var(--text-color);
+    /* background-color: var(--primary-color-light); */
+    /* color: var(--text-color); */
     border-radius: 6px;
     font-size: 17px;
     font-weight: 500;
@@ -227,6 +245,7 @@ body.dark .sidebar li a:hover .text{
     background-color: var(--primary-color-light);
     position: relative;
     transition: var(--tran-05);
+ 
 }
 
 .menu-bar .mode .sun-moon{
@@ -310,8 +329,6 @@ body.dark .home .text{
     color: var(--text-color);
 }
 
-
-
 /* Dropdown button */
 .dropbtn {
     background-color: rgb(168, 255, 213);;
@@ -340,14 +357,10 @@ body.dark .home .text{
     box-shadow: #0099ff 2px 3px 10px;
   }
 
-
-
   .dropdown {
     float: right;
     position: relative;
     display: inline-block;
-
-
   }
   
   .dropdown-content {
@@ -377,7 +390,6 @@ body.dark .home .text{
   
   .show {display: block;}
 
-
     .dropdown-content a:hover {background-color: hsla(204, 97%, 64%, 0.707);
         color: white;
         font-weight: 800;
@@ -385,16 +397,29 @@ body.dark .home .text{
         box-shadow: #0099ff 2px 3px 10px;
     }
 
+.tubelight{
+    position: relative;
+    letter-spacing : 3px;
+    color:#000000;
+    line-height: 0.70em;
+    outline: none;
+    animation: animate 5s linear infinite;
 
-/* 
-h1{
-    font: size 2.1rem;
-    line-height: 1.4;
-    letter-spacing: 0.5rem;
-    text-align: center;
-    color:white;
-    margin-top: 50px;
-} */
+}
+@keyframes animate {
+    0%{
+        color: #cfcfcf;
+        text-shadow: #0e0e0e 2px 3px 5px;
+    }
+    50%{
+        color: #0b18ff;
+        text-shadow: #fff700 4px 3px 5px;
+    }
+    100% {
+        color: #000000;
+        text-shadow: #ffffff 4px 3px 5px;
+    }
+}
 
 .feed{
     width:70%;
