@@ -342,13 +342,6 @@ body.dark .home .text{
     position: relative;
 }
   
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #0099ff;
-    color: white;
-    font-weight: 800;
-    text-shadow: black 4px 3px 5px;
-  }
-
   .dropbtn:hover, .dropbtn:focus.dark {
     background-color: #606060;
     color: white;
@@ -421,30 +414,67 @@ body.dark .home .text{
     }
 }
 
-.feed{
-    width:70%;
-    height:400px;
-    position: absolute;
-    left:50%;
-    top:50%;
-    background-image: url('bg.jpg');
-    background-size: 100% 100%;
-    transform: translate(-50%,-50%);
-    box-shadow: 0px 16px 10px 0px rgba(0,0,0,0.2);
-    animation: slider 15s infinite linear;
+
+.dark .carousel-cell{
+    box-shadow: 3px 9px 12px 0px rgb(124, 205, 255);
 }
 
-@keyframes slider{
-    0%{
-       background-image: url(bg.jpg);
-    }
-    35%{
-        background-image: url(wallpaper.png);
-    }
-    75%{
-        background-image: url(Scenery.png);
-    }
+
+
+
+.carousel-box{
+    width:70%;
+    margin-left: 20%;
+    height:400px;
+    margin-top: 5%;
+    
 }
-.dark .feed{
-    box-shadow: 3px 9px 12px 0px rgb(124, 205, 255);
+/* external css: flickity.css */
+
+.carousel {
+  background: #EEE;
+  height: 500px;
+  box-shadow: 3px 9px 12px 0px rgb(124, 205, 255); 
+  border-radius: 30%;
+}
+
+.carousel-cell {
+  width: 65%;
+  height: 100%;
+  margin-right: 30px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  height: 400px;
+  display: block;
+  max-height: 100%;
+  margin: 7% auto;
+  max-width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+
+    box-shadow: #0099ff 2px 3px 10px;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+
+.dark .Auto-type{
+    justify-content: center;
+    margin-left: 46%;
+    color: #EEE;
+}
+.Auto-type{
+    justify-content: center;
+    margin-left: 46%;
+   
+}
+.auto-typed {
+   
+  margin-top: 90%;
 }

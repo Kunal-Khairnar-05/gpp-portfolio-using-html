@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-  <!-- Coding by CodingLab | www.codinglabweb.com -->
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +6,16 @@
     
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     
     <!--<title>Dashboard Sidebar Menu</title>--> 
     <title>Group Portfolio</title>
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
 </head>
 <body>
     <nav class="sidebar close">
@@ -136,85 +138,166 @@
 
 
 
-            <h1 class="tubelight" contenteditable="true">Hello</h1>
+            <h1 class="tubelight">Hey buddy😎</h1>
+            
+
             
 
 
 
-
-
-              <div class="feed">
+              <!-- <div class="feed">
                 Sinix
-              </div>
+              </div> -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
         </div>
-    </section>
+      <div class="Auto-type">
+        <h1>This Pic is <span class="auto-typed"></span>
+        </h1>
+      </div>
 
+
+    </section>
+    
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    
+    
+    
     <script>
         const body = document.querySelector('body'),
-      sidebar = body.querySelector('nav'),
-      toggle = body.querySelector(".toggle"),
-      searchBtn = body.querySelector(".search-box"),
-      modeSwitch = body.querySelector(".toggle-switch"),
-      modeText = body.querySelector(".mode-text");
-
-
-toggle.addEventListener("click" , () =>{
-    sidebar.classList.toggle("close");
-})
-
-searchBtn.addEventListener("click" , () =>{
-    sidebar.classList.remove("close");
-})
-
-modeSwitch.addEventListener("click" , () =>{
-    body.classList.toggle("dark");
-    
-    if(body.classList.contains("dark")){
-        modeText.innerText = "Light mode";
-    }else{
-        modeText.innerText = "Dark mode";
+        sidebar = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text");
         
-    }
+        
+        toggle.addEventListener("click" , () =>{
+            sidebar.classList.toggle("close");
+        })
+        
+        searchBtn.addEventListener("click" , () =>{
+            sidebar.classList.remove("close");
+        })
+        
+        modeSwitch.addEventListener("click" , () =>{
+            body.classList.toggle("dark");
+            
+            if(body.classList.contains("dark")){
+                modeText.innerText = "Light mode";
+            }else{
+                modeText.innerText = "Dark mode";
+                
+            }
 });
     </script>
 
 
+<div class="carousel-box">
+    <h1>Flickity - lazyLoad: 2 adjacent</h1>
+
+    <!-- Flickity HTML init -->
+    <div class="carousel"
+       data-flickity='{ "lazyLoad": 2,
+       "initialIndex": 2,
+       "autoPlay":true,
+       "wrapAround": true }'>
 
 
+
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="1.jpg" alt="tulip" />
+      </div>
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="my_img2.jpg" alt="grapes" />
+      </div>
+
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="2.jpg" alt="raspberries" />
+      </div>
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="3.jpg" alt="wolf" />
+
+      </div>
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="bg.jpg" alt="sea" />
+      </div>
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="my_img1.jpg" alt="leaf droplets" />
+      </div>
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="4.jpg" alt="gulls" />
+      </div>
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="Scenery.png" alt="touch screen" />
+      </div>
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/van.jpg" alt="van" />
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+      </div>
+    </div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed(".auto-typed",{
+        strings:["😎","😒","🤩","😮","🤐","😇"],
+        typeSpeed:700,
+        backSpeed:700,
+        loop:true
+    })
+</script>
 </body>
+
+
+
 </html>
